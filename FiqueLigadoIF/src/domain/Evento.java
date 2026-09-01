@@ -85,7 +85,7 @@ public class Evento {
     public void setCadastradoPor(Usuario cadastradoPor) {
         this.cadastradoPor = cadastradoPor;
     }
-
+    
 
 
 }

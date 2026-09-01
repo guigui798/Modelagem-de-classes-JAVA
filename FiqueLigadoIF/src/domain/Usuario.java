@@ -3,11 +3,11 @@ package domain;
 public class Usuario {
     private Integer id;
     private String senha;
-    private Enum TipoUsuarioEnum;
+    private TipoUsuarioEnum tipoUsuario;
     private Pessoa pessoa;
 
-    public Usuario(Enum TipoUsuarioEnum, Integer id, Pessoa pessoa, String senha) {
-        this.TipoUsuarioEnum = TipoUsuarioEnum;
+    public Usuario(TipoUsuarioEnum tipoUsuarioEnum, Integer id, Pessoa pessoa, String senha) {
+        this.tipoUsuario = tipoUsuarioEnum;
         this.id = id;
         this.pessoa = pessoa;
         this.senha = senha;
@@ -29,12 +29,12 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public Enum getTipoUsuarioEnum() {
-        return TipoUsuarioEnum;
+    public TipoUsuarioEnum getTipoUsuarioEnum() {
+        return tipoUsuario;
     }
 
-    public void setTipoUsuarioEnum(Enum TipoUsuarioEnum) {
-        this.TipoUsuarioEnum = TipoUsuarioEnum;
+    public void setTipoUsuarioEnum(TipoUsuarioEnum tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
     }
 
     public Pessoa getPessoa() {
@@ -47,7 +47,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario [id=" + id + ", senha=" + senha + ", TipoUsuarioEnum=" + TipoUsuarioEnum + ", pessoa=" + pessoa
+        return "Usuario [id=" + id + ", senha=" + senha + ", TipoUsuarioEnum=" + tipoUsuario + ", pessoa=" + pessoa
                 + "]";
     }
 
